@@ -19,5 +19,15 @@ namespace RegexProblem
             }
             Console.WriteLine(name + " is a invalid Name");
         }
+        public void Email(string id)
+        {
+            const string mailId = "^[a-zA-z0-9]+[.]{0,1}[a-zA-z0-9]+([@]?)+[a-z]{1,15}[.]+(com|co)+((.in)*)$";
+            if (Regex.IsMatch(id, mailId))
+            {
+                Console.WriteLine(id + " is a valid Email");
+                return;
+            }
+            Console.WriteLine(id + " is a invalid Email");
+        }
     }
 }
