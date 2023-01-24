@@ -41,7 +41,8 @@ namespace RegexProblem
         }
         public void Password(string password)
         {
-            const string passwordRegex = "^[A-z]{8,}$";
+            //const string passwordRegex = "^[A-z]{8,}$";
+            const string passwordRegex = "^((?=.*[A-Z])(?=.*[a-z])).{8,}$";
             if (Regex.IsMatch(password, passwordRegex))
             {
                 Console.WriteLine(password + " is valid Password");
