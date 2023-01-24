@@ -24,10 +24,20 @@ namespace RegexProblem
             const string mailId = "^[a-zA-z0-9]+[.]{0,1}[a-zA-z0-9]+([@]?)+[a-z]{1,15}[.]+(com|co)+((.in)*)$";
             if (Regex.IsMatch(id, mailId))
             {
-                Console.WriteLine(id + " is a valid Email");
+                Console.WriteLine(id + " is valid Email");
                 return;
             }
-            Console.WriteLine(id + " is a invalid Email");
+            Console.WriteLine(id + " is invalid Email");
+        }
+        public void Mobile(string number)
+        {
+            const string numberRegex = "^(91 )[6-9]{1}[0-9]{9}$";
+            if (Regex.IsMatch(number, numberRegex))
+            {
+                Console.WriteLine(number + " is a valid Number");
+                return;
+            }
+            Console.WriteLine(number + " is a invalid Number");
         }
     }
 }
