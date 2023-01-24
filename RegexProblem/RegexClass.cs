@@ -39,5 +39,15 @@ namespace RegexProblem
             }
             Console.WriteLine(number + " is a invalid Number");
         }
+        public void Password(string password)
+        {
+            const string passwordRegex = "^[A-z]{8,}$";
+            if (Regex.IsMatch(password, passwordRegex))
+            {
+                Console.WriteLine(password + " is valid Password");
+                return;
+            }
+            Console.WriteLine(password + " is invalid Password");
+        }
     }
 }
