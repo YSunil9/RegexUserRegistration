@@ -9,9 +9,9 @@ namespace RegexProblem
 {
     internal class RegexClass
     {
-        public void FirstName(string name)
+        public void Name(string name)
         {
-            const string NAME = "^[A-Z]{1}[a-z]{2}$";
+            const string NAME = "^[A-Z]{1}[a-z]{2,}$";
             if (Regex.IsMatch(name, NAME))
             {
                 Console.WriteLine(name + " is a valid Name");
