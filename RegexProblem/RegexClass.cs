@@ -52,5 +52,20 @@ namespace RegexProblem
             }
             Console.WriteLine(password + " is invalid Password");
         }
+        public void EmailSample()
+        {
+            Console.WriteLine("Enter Email Id");
+            string email = Console.ReadLine();
+            string emailFormat = "[A-Za-z0-9](.[-+a-z0-9A-Z])+@[A-Za-z0-9]+.[a-z]{2,4}(.[a-z]{2,3})?$";
+            Regex regex1 = new Regex(emailFormat);
+            if (regex1.IsMatch(email))
+            {
+                Console.Write(email + " is Valid \n");
+            }
+            else
+            {
+                Console.Write("Email Is Invalid!\nPlease Enter Email ID in Proper Format \n");
+            }
+        }
     }
 }
